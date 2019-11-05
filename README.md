@@ -5,7 +5,7 @@
 1. 使用下面命令进行安装
 
 
-		npm install git+http://10.10.10.232:3000/wechat_crm/node-silk-converter.git -S --build-from-source --runtime=electron --target=2.0.2 --dist-url=https://atom.io/download/electron
+		npm install git+http://10.10.10.232:3000/wechat_crm/node_silk_converter.git -S --build-from-source --runtime=electron --target=2.0.2 --dist-url=https://atom.io/download/electron
 
 2. 使用以下指令在install后重新构建
 
@@ -16,7 +16,7 @@
 
 ```json
 "scripts": {
-    "preinstall": "npm install git+http://10.10.10.232:3000/wechat_crm/node-silk-converter -S --build-from-source --runtime=electron --target=2.0.2 --dist-url=https://atom.io/download/electron",
+    "preinstall": "npm install git+http://10.10.10.232:3000/wechat_crm/node_silk_converter -S --build-from-source --runtime=electron --target=2.0.2 --dist-url=https://atom.io/download/electron",
     "postinstall": "npm rebuild",
     "rebuild": "electron-rebuild -f -w silk_converter"
   },

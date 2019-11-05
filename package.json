@@ -1,0 +1,32 @@
+{
+  "name": "silk_converter",
+  "description": "wechat silk converter , silk <=> pcm",
+  "version": "1.0.0",
+  "homepage": "http://10.10.10.232:3000/wechat_crm/node-sqlite3.git#",
+  "author": {
+    "name": "yema"
+  },
+  "binary": {
+    "module_name": "node_silk_converter",
+    "module_path": "./lib/binding/{node_abi}-{platform}-{arch}",
+    "host": "https://10.10.10.232:3000/",
+    "remote_path": "./{name}/v{version}/{toolset}/",
+    "package_name": "{node_abi}-{platform}-{arch}.tar.gz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.10.10.232:3000/wechat_crm/node-sqlite3.git"
+  },
+  "dependencies": {
+    "nan": "^2.12.1",
+    "node-pre-gyp": "^0.11.0",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build",
+    "pack": "node-pre-gyp package"
+  },
+  "main": "./lib/silk_converter"
+}

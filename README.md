@@ -40,3 +40,27 @@ if (code == 0) {
   console.log('success');
 }
 ```
+
+## silk -> mp3
+
+```js
+const Silk = require('silk_converter')
+const fst = require('ffmpeg-static')
+const Ffmpeg = require('fluent-ffmpeg')
+
+var inputFile = 'source.amr'
+var tmpFile = 'source.pcm'
+const outputFile = 'source.mp3'
+
+// silk -> pcm
+var code = Silk.decode(inputFile, tmpFile)
+if (code == 0){
+  //success
+  // pcm -> mp3
+  var ffmpeg = Ffmpeg(tmpFile)
+  ffmpeg.setFfmpegPath(fst.path)
+  ffmpeg.inputFormat("s16le").inputOptions(["-ar 24000", "-ac 1"]);
+  ffmpeg.noVideo().save(outputFile);
+  //TODO delete the tmpFile
+}
+```

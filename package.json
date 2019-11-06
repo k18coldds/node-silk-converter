@@ -10,7 +10,7 @@
     "module_name": "node_silk_converter",
     "module_path": "./lib/binding/{node_abi}-{platform}-{arch}",
     "host": "https://10.10.10.232:3000/",
-    "remote_path": "./{name}/v{version}/{toolset}/",
+    "remote_path": "./wechat_crm/node-static/{name}/v{version}/",
     "package_name": "{node_abi}-{platform}-{arch}.tar.gz"
   },
   "repository": {
